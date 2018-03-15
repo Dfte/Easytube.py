@@ -30,10 +30,10 @@ And then download them all in a row using -f "file that contains the links" :
 <h1>Videos</h1>
 
 As much as for the audio part, you can either download a single video or multiples ones using the -u and -f arguments.
-However you can also specify the resolution of the video that you want :
 
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/5.png"></img>
 
+However you can also specify the resolution of the video that you want.
 There are 3 resolutions available :<br>
 -(l)ow<br>
 
