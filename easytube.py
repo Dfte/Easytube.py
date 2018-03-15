@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: Latin-1 -*-
-#Download Youtube Videos
+#easytube.py
 #Written by Defte
 
 #Importing needed librairies
