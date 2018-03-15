@@ -1,7 +1,7 @@
 # Easytube.py
 
 Easytube.py is a Python 3.6 script that allows you to download contents (sounds and/or videos) from YouTube very easily.
-The tool is using the pytube library and the ffmpeg tool. You will need both these items to run the script (CF the install.sh file).
+The tool is using the pytube library and the ffmpeg tool. You will need both these items to run the script so before doing anything please launch the instal.sh script.
 
 You can download three types of contents : audios, videos and playlists.
 
@@ -18,11 +18,13 @@ By default, YouTube audio files are using .mp4 extension. You might want to conv
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/1.png"></img>
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/2.png"></img>
 
+To convert the files from .mp4 to .mp3 the tool uses ffmpeg.
+
 Note that you can also create a .txt file in which you will put all your YouTube URL's :
 
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/3.png"></img>
 
-And then download them all in a row using -f "file that contains the links" :
+And then download them all using -f "file that contains the links" :
 
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/7.png"></img>
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/4.png"></img>
@@ -51,20 +53,20 @@ If you don't specify any resolution then the programm will by default download t
 
 There is a <b>huge trick</b> in that part of the programm. In fact you can not predefine the resolutions that will be available for a video on YouTube (it will all depend of the source video resolution) so i had to hack something up :
 
--If you choose the (l)ow argument then the programm will check for the lowest resolution available that has a .mp4 extension and download it.
--If you choose the (m)edium argument then it will look for the 720p resolution. If it is not available it will download the 480p resolution.
+-If you choose the (l)ow argument then the programm will check for the lowest resolution available that has a .mp4 extension and download it.<br>
+-If you choose the (m)edium argument then it will look for the 720p resolution. If it is not available it will download the 480p resolution.<br>
 -If you choose the (h)igh argument then it will download the highest resolution available (1080p or 720p).
 
 Whatever resolution you choose you will always end up with a .mp4 file.
 
 <h1>Playlist</h1>
  
-You can download an entire playlist very easily. Obviously you can choose between downloading the video (with sound) or only the audio part just by using the --format (sound or video). To download a playlist you will have to specify that the --format is playlist :
+You can download an entire playlist very easily. To download a playlist you will have to specify that the --format is playlist :
 
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/playlist.png"></img>
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/playlistdownloaded.png"></img>
 
-This time you will not be able to specify the resolution, it will automatically download the highest resolution availabe. However you can still convert the videos into .mp3 if you only want the audio part.
+This time you will not be able to specify the resolution, it will automatically download the highest resolution availabe. However you can still convert the videos into .mp3 if you only want the audio part (using --convert).
 
 
 
