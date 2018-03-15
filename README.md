@@ -29,7 +29,7 @@ And then download them all in a row using -f "file that contains the links" :
 
 <h1>Videos</h1>
 
-As much as for the audio part, you can either download a single video or multiples ones using the -u and -f arguments.
+As much as for the audio part, you can either download a single video or multiples ones using the -u and -f arguments. This time, you will have to add the --format video in order to download it :
 
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/5.png"></img>
 
