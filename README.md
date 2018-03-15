@@ -11,7 +11,7 @@ The easiest way to only download the audio part is by lauching this command :
 
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/0.png"></img>
 
-I strongly advice you to double quote the link since i had a lot of problems with invalid caracters such as " / " that broke the terminal when it comes to converting the song to mp3. This command means that you will download a content using the URL (-u) and you only want the audio part (--format sound).
+I strongly advice you to double quote the link since i had a lot of problems with invalid caracters such as " / " that break the terminal when it comes to converting the song to mp3. This command means that you will download a content using the URL (-u) and you only want the audio part (--format sound).
 
 By default, YouTube audio files are using .mp4 extension. You might want to convert the .mp4 files to .mp3. To do so just add the argument --convert and it will be done.
 
