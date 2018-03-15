@@ -30,11 +30,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-u",help = "Specify the URL of the YouTube video you want to convert.", dest = "url")
 #Specify a file that contains multiples URL's
 parser.add_argument("-f", help = "Specify a file that contains multiple youtube URL's.", dest = "file")
-#Specify whether you want to down load the video format or the sound.
+#Specify whether you want to download the video, the sound, or a playlist
 parser.add_argument("--format", help = "Specify if you want to download a video, a sound or a playlist.", dest = "format")
 #Specify if you want to convert the mp4 files into mp3
 parser.add_argument("--convert", help = "Specify if you want to convert from mp4 to mp3.",  nargs = "?", const = "yes", dest = "convert")
-#Specify the reoslution of the video
+#Specify the resolution of the video
 parser.add_argument("--resolution", help = "Specify the resolution of the video (l = 480, m = 720p, h = 1080p.", dest = "resolution")
 args=parser.parse_args()
 
@@ -45,7 +45,7 @@ def connected():
 		hostname = "youtube.com"
 		#Ping youtube.com
 		response = os.system("ping -c 1 " + hostname + " >> /dev/null")
-		#If we got a response then we can contact youtube.com
+		#If we got a response then it's alright
 		if response == 0 :
 		    print("%s    [+] Yes, we can !%s\n" % (green, end))
 		    return 0
@@ -66,7 +66,7 @@ def checkDirectory() :
 		if os.path.isdir(directory) :
 			print("%s    [+] %s directory exists.%s" % (green, directory, end))
 		else :
-			#If they don't we create it
+			#If they don't we create them
 			print("%s    [-] Creating %s directory.%s" % (white, directory, end))
 			os.system("mkdir %s" % (directory))
 	return 0
@@ -135,24 +135,26 @@ def convert2mp3(name) :
 		os.system("ffmpeg -i " + '"' + namemp4 + '"' + " " + '"' + namemp3 + '"'" 2> /dev/null")
 		return 0
 	except KeyboardInterrupt :
-		sys.exit("%s  [!] Check was interrupted. Exiting...%s" %(red, end))
+		sys.exit("%s  [!] Convertion was interrupted. Exiting...%s" %(red, end))
 	except :
 		sys.exit("%s    [!] Error while converting to mp3. Exiting...%s" %(red, end))
 
-#I add to create a new convert fonction because of the way the librairie works
+#I had to create a new convert fonction because of the way the library works
 #If you want to download a playlist you will download all videos from the first to the last
 #The way i coded the convert2mp3 doesn't allow me to convert these songs once they are downloaded.
-#So here is the function that converts
+#So here is the function that works
 def convertAll() :
+	#for each files in /easytube
 	files = os.listdir()
 	try :
 		for title in files :
 			namemp4 = title
 			namemp3 = title.replace(".mp4",".mp3")
+			#This line equal to : "ffmpeg -i song.mp4 song.mp3 2> /dev/null"
 			os.system("ffmpeg -i " + '"' + namemp4 + '"' + " " + '"' + namemp3 + '"'" 2> /dev/null")
 		return 0
 	except KeyboardInterrupt :
-		sys.exit("%s  [!] Check was interrupted. Exiting...%s" %(red, end))
+		sys.exit("%s  [!] Convertion was interrupted. Exiting...%s" %(red, end))
 	except : 
 		sys.exit("%s    [!] Error while converting to mp3. Exiting...%s" %(red, end))
 
