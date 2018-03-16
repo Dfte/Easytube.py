@@ -5,7 +5,7 @@ The tool is using the pytube library and the ffmpeg tool. You will need both the
 
 You can download three types of contents : audios, videos and playlists.
 
-<h1>Audio</h1>
+<h2>Audio</h2>
 
 The easiest way to only download the audio part is by lauching this command :
 
@@ -29,7 +29,7 @@ And then download them all using -f "file that contains the links" :
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/7.png"></img>
 <img src="https://github.com/Dfte/Easytube.py/blob/master/images/4.png"></img>
 
-<h1>Videos</h1>
+<h2>Videos</h2>
 
 As much as for the audio part, you can either download a single video or multiples ones using the -u and -f arguments. This time, you will have to add the --format video in order to download it :
 
@@ -59,7 +59,7 @@ There is a <b>huge trick</b> in that part of the programm. In fact you can not p
 
 Whatever resolution you choose you will always end up with a .mp4 file.
 
-<h1>Playlist</h1>
+<h2>Playlist</h2>
  
 You can download an entire playlist very easily. To download a playlist you will have to specify that the --format is playlist :
 
@@ -68,7 +68,19 @@ You can download an entire playlist very easily. To download a playlist you will
 
 This time you will not be able to specify the resolution, it will automatically download the highest resolution availabe. However you can still convert the videos into .mp3 if you only want the audio part (using --convert).
 
+<h1>Graphical User Interface</h1>
 
+I've heard that people prefer graphical interface so i made one :
+
+<img src="https://github.com/Dfte/Easytube.py/blob/master/images/graphical.png"></img>
+
+So yeah i know it is not beautiful but it works and if you are a Linux user then you shoudln't be using this è-é !
+To launch the GUI just launch the graphicalinterface.py
+
+<h1>Windows Users</h1>
+
+First of all i wanted to convert the tool for Windows but it would take me too much time. So i decided not to do it... 
+But ! A friend of mine reminded me that now there is the new ubuntu shell available on Windows so i might create a tutoriel about how to use the tool with the Ubuntu shell.
 
 The downloads might take some times (depending of your connection speed). Originaly i wanted to add a progress bar but i had to remove it because it was feezing the tool way too much. I did a lot of tests, had to patch a lot of things and yet there might be some errors. 
 
