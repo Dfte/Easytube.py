@@ -1,5 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
+#graphicalinterface.py
 
 from tkinter import * 
 from tkinter.filedialog import *
