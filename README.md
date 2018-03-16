@@ -82,6 +82,8 @@ To launch the GUI just launch the graphicalinterface.py
 First of all i wanted to convert the tool for Windows but it would take me too much time. So i decided not to do it... 
 But ! A friend of mine reminded me that now there is the new ubuntu shell available on Windows so i might create a tutoriel about how to use the tool with the Ubuntu shell.
 
+<h1>Conclusion</h1>
+
 The downloads might take some times (depending of your connection speed). Originaly i wanted to add a progress bar but i had to remove it because it was feezing the tool way too much. I did a lot of tests, had to patch a lot of things and yet there might be some errors. 
 
 If you find one, if you would like something to be upgraded or if you just want to talk about this tool please feel free to contact me on : <a href="https://www.facebook.com/DefteWhiteFlag/">Facebook</a>
