@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Installing pip3"
+apt-get install python3-pip
+
 echo "Installing pytube library."
 pip3 install pytube
 
