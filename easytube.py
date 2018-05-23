@@ -121,7 +121,7 @@ def download(link, formatdl, resolution) :
 #I wanted to make something a litle bit more professional but...
 #I was so pissed off that i decided that "wth i don't care as long as it works"
 def clean(title) :
-	forbidden = ["/", '"', "'"]
+	forbidden = ["/", '"', "'", "|"]
 	for item in forbidden :
 		title = title.replace(item,"")
 	return title
